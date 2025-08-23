@@ -1,0 +1,18 @@
+<% include ./partials/head %>
+<main class="container py">
+  <h1 class="serif">Padel Clubs</h1>
+  <p class="muted">Search, filter, and discover clubs worldwide.</p>
+
+  <div class="filters">
+    <input id="q" placeholder="Search by name, city, or country…" />
+    <label><input type="checkbox" id="fIndoor" /> Indoor</label>
+    <label><input type="checkbox" id="fOutdoor" /> Outdoor</label>
+    <label class="mincourts">Min courts <input type="number" id="minCourts" min="0" value="0" /></label>
+  </div>
+
+  <div id="map" class="map"></div>
+
+  <div id="clubList" class="grid clubs"></div>
+  <div class="muted small">Map data © OpenStreetMap contributors.</div>
+</main>
+<% include ./partials/footer %>

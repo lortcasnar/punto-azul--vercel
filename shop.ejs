@@ -1,0 +1,16 @@
+<% include ./partials/head %>
+<main class="container py">
+  <h1 class="serif">Shop</h1>
+  <p class="muted">Buy Punto Azul pieces via Shopify Buy Button.</p>
+
+  <div id="collection-component"
+       data-shopify-domain="<%= shopifyDomain %>"
+       data-shopify-token="<%= shopifyToken %>"
+       data-shopify-collection-id="<%= shopifyCollectionId %>"></div>
+
+  <div class="muted small" style="margin-top:.5rem">
+    Configure Shopify in Vercel env:
+    SHOPIFY_DOMAIN, SHOPIFY_STOREFRONT_TOKEN, SHOPIFY_COLLECTION_ID
+  </div>
+</main>
+<% include ./partials/footer %>

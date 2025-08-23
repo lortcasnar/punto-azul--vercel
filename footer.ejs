@@ -1,0 +1,37 @@
+<footer class="site-footer <%= page!=='home' ? 'simple' : '' %>">
+  <div class="container <%= page==='home' ? 'footer-grid' : '' %>">
+    <% if (page==='home') { %>
+      <div>
+        <div class="brand serif">Punto Azul</div>
+        <p class="muted">Athleisure streetwear blending Acapulco heritage and modern luxury.</p>
+      </div>
+      <div>
+        <div class="eyebrow">Help</div>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="eyebrow">Follow</div>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="/music">Music</a></li>
+        </ul>
+      </div>
+    <% } %>
+  </div>
+  <div class="copy muted">© <span id="year"></span> Punto Azul. All rights reserved.</div>
+</footer>
+
+<script src="/public/js/app.js"></script>
+<% if (page === 'community') { %><script src="/public/js/community.js"></script><% } %>
+<% if (page === 'clubs') { %>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/public/js/clubs.js"></script>
+<% } %>
+<% if (page === 'shop') { %><script src="/public/js/shop.js"></script><% } %>
+</body>
+</html>

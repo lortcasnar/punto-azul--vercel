@@ -1,0 +1,25 @@
+<% include ./partials/head %>
+<main class="container py">
+  <h1 class="serif">Community</h1>
+  <p class="muted">Post updates, ask questions, and connect.</p>
+
+  <% if (!isAuthed) { %>
+    <div class="muted">Please <a href="/login">log in</a> to post or comment.</div>
+  <% } %>
+
+  <section class="composer">
+    <input id="author" placeholder="Your name (optional)" <%= isAuthed ? '' : 'disabled' %> value="<%= user && user.name ? user.name : '' %>" />
+    <textarea id="body" placeholder="Share something with the Punto Azul community…" <%= isAuthed ? '' : 'disabled' %> ></textarea>
+    <div class="row-end">
+      <input type="file" id="imageInput" accept="image/*" <%= isAuthed ? '' : 'disabled' %> />
+      <button id="uploadBtn" class="btn btn-outline" <%= isAuthed ? '' : 'disabled' %> >Add Image</button>
+      <button id="postBtn" class="btn btn-solid" <%= isAuthed ? '' : 'disabled' %> >Post</button>
+    </div>
+    <input type="hidden" id="cloudName" value="<%= cloudName %>" />
+    <input type="hidden" id="uploadPreset" value="<%= uploadPreset %>" />
+    <input type="hidden" id="imageUrl" value="" />
+  </section>
+
+  <section id="posts" class="posts"></section>
+</main>
+<% include ./partials/footer %>

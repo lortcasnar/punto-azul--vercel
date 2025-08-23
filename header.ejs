@@ -1,0 +1,18 @@
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="/">PUNTO AZUL<span class="dot"></span></a>
+    <div class="links">
+      <a href="/" class="<%= page==='home' ? 'active':'' %>">Shop</a>
+      <a href="/shop" class="<%= page==='shop' ? 'active':'' %>">Buy</a>
+      <a href="/music" class="<%= page==='music' ? 'active':'' %>">Music</a>
+      <a href="/community" class="<%= page==='community' ? 'active':'' %>">Community</a>
+      <a href="/clubs" class="<%= page==='clubs' ? 'active':'' %>">Clubs</a>
+      <% if (isAuthed) { %>
+        <a href="/profile">Profile</a>
+        <a href="/logout">Logout</a>
+      <% } else { %>
+        <a href="/login">Login</a>
+      <% } %>
+    </div>
+  </nav>
+</header>

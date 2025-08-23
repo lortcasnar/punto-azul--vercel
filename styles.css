@@ -1,0 +1,83 @@
+:root{--sand:#F5F1EA;--ink:#0b0b0b;--stone:#6f6f6f;--navy:#0B1D3A;--azul:#0A5ED7;--white:#fff}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--sand);color:var(--ink);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.serif{font-family:'Playfair Display', Georgia, serif}
+.announce{background:var(--navy);color:var(--sand);text-align:center;padding:.5rem;letter-spacing:.2em;font-size:.7rem;text-transform:uppercase}
+.site-header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background:rgba(245,241,234,.7);border-bottom:1px solid rgba(0,0,0,.06);z-index:10}
+.nav{max-width:1100px;margin:0 auto;padding:1rem;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Playfair Display', Georgia, serif;font-size:1.5rem;text-decoration:none;color:var(--ink)}
+.brand .dot{display:inline-block;width:.5rem;height:.5rem;background:var(--azul);border-radius:50%;margin-left:.35rem;vertical-align:middle}
+.links a{margin-left:1rem;text-decoration:none;color:var(--ink);font-size:.95rem}
+.links a.active,.links a:hover{opacity:.6}
+.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+.py{padding:1.5rem 1rem}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:1rem;margin-top:1rem}
+.hero-media img{width:100%;height:100%;object-fit:cover;border-radius:1.25rem;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.hero-copy{display:flex;flex-direction:column;justify-content:space-between}
+.hero-copy h1{font-size:2.5rem;line-height:1.1;margin:0}
+.hero-copy p{color:rgba(0,0,0,.72)}
+.actions{display:flex;gap:.6rem;margin-top:.5rem}
+.btn{display:inline-block;padding:.75rem 1.1rem;border-radius:999px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer}
+.btn-solid{background:var(--azul);color:var(--white)}
+.btn-outline{border:1px solid var(--azul);color:var(--azul);background:transparent}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:1rem}
+.mini-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:.8rem}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;margin-top:2rem}
+.grid{display:grid;gap:1rem}
+.products{grid-template-columns:repeat(4,1fr)}
+.card-media{position:relative;overflow:hidden;border-radius:1rem;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.card-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .4s}
+.card-media:hover img{transform:scale(1.05)}
+.quick{position:absolute;left:.6rem;right:.6rem;bottom:.6rem;opacity:0;transition:opacity .3s;background:var(--azul);color:#fff;padding:.5rem .8rem;border-radius:999px;text-transform:uppercase;letter-spacing:.2em;font-size:.7rem}
+.card-media:hover .quick{opacity:1}
+.card-meta .row{display:flex;align-items:center;justify-content:space-between;margin:.6rem 0 .25rem}
+.card-meta .muted{color:var(--stone);font-size:.9rem}
+.lookbook{grid-template-columns:repeat(3,1fr);margin-top:1rem}
+.lookbook img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.journal{grid-template-columns:repeat(3,1fr)}
+.tile{background:#fff;border-radius:1rem;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.tile img{width:100%;height:12rem;object-fit:cover}
+.tile-body{padding:1rem}
+.tile-body .muted{color:var(--stone)}
+.site-footer{margin-top:3rem;border-top:1px solid rgba(0,0,0,.06)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;padding:1.2rem 0}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;color:var(--stone)}
+.site-footer.simple{border-top:0}
+.copy{text-align:center;padding:1rem 0}
+.muted{color:var(--stone)}
+.small{font-size:.8rem}
+.embeds{grid-template-columns:1fr 1fr;margin-top:1rem}
+.embed .ratio{position:relative;width:100%;padding-top:56.25%;overflow:hidden;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,.08);background:#fff}
+.embed iframe{position:absolute;inset:0;width:100%;height:100%}
+.caption{font-size:.9rem;color:var(--stone);margin-top:.4rem}
+.composer{background:#fff;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:1rem;margin-top:1rem;display:grid;gap:.6rem}
+.composer input,.composer textarea{width:100%;border:1px solid rgba(0,0,0,.1);border-radius:.8rem;padding:.8rem}
+.row-end{display:flex;justify-content:flex-end}
+.posts{display:grid;gap:1rem;margin-top:1rem}
+.post{background:#fff;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:1rem}
+.meta{font-size:.85rem;color:var(--stone)}
+.comments{margin-top:.5rem;border-top:1px solid rgba(0,0,0,.06);padding-top:.5rem}
+.comment{font-size:.9rem;margin:.2rem 0}
+.add-comment{display:grid;grid-template-columns:1fr auto;gap:.4rem;margin-top:.5rem}
+.add-comment input{border:1px solid rgba(0,0,0,.1);border-radius:999px;padding:.5rem .8rem}
+.add-comment button{background:var(--azul);color:#fff;border-radius:999px;padding:.5rem .9rem;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;border:0;cursor:pointer}
+.filters{display:grid;grid-template-columns:1fr auto auto auto;gap:.6rem;margin-top:1rem}
+.filters input[type="text"],.filters input[type="number"]{border:1px solid rgba(0,0,0,.1);border-radius:999px;padding:.6rem .9rem}
+.filters label{display:flex;align-items:center;gap:.4rem;font-size:.9rem}
+.filters .mincourts input{width:80px}
+.map{height:420px;border-radius:1rem;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-top:1rem;background:#fff}
+.clubs{grid-template-columns:repeat(3,1fr);margin-top:1rem}
+.club{background:#fff;border-radius:1rem;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:1rem}
+.club .row{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem}
+.club .muted{color:var(--stone)}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .products{grid-template-columns:repeat(2,1fr)}
+  .lookbook{grid-template-columns:1fr}
+  .journal{grid-template-columns:1fr}
+  .embeds{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .clubs{grid-template-columns:1fr}
+  .filters{grid-template-columns:1fr 1fr;grid-auto-rows:min-content}
+}
