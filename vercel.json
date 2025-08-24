@@ -1,8 +1,8 @@
 {
   "version": 2,
   "functions": {
-    "api/index.js": {
-      "runtime": "nodejs20.x",
+    "api/**/*.js": {
+      "runtime": "@vercel/node@4",
       "includeFiles": "views/**"
     }
   },
@@ -10,11 +10,4 @@
     { "src": "/public/(.*)", "dest": "/public/$1" },
     { "src": "/(.*)", "dest": "/api/index.js" }
   ]
-}
-{
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "@vercel/node@4"
-    }
-  }
 }
