@@ -11,3 +11,10 @@
     { "src": "/(.*)", "dest": "/api/index.js" }
   ]
 }
+{
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "@vercel/node@4"
+    }
+  }
+}
